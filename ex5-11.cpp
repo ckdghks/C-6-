@@ -26,7 +26,7 @@ Person::Person(Person& person) {
   int len = strlen(person.name);
   this->name = new char [len+1];
   strcpy(this->name, person.name);
-  cout << "복ㅈ사 생성자 실행. 원본 객체의 이름 " << this->name << endl;
+  cout << "복사 생성자 실행. 원본 객체의 이름 " << this->name << endl;
 }
 
 Person::~Person() {
