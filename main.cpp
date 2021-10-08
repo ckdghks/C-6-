@@ -19,14 +19,14 @@ Book::Book(char* title, int price) {
   this -> title = new char [len+1];  // name 문자열 공간 할당
   strcpy(this->title, title);
 }
-/*
+
 Book::Book(Book& book) {
   this->price = book.price; // price값 복사
   int len = strlen(book.title);
   this->title = new char [len+1];
   strcpy(this->title, book.title);
   cout << "복사 생성자 실행. 원본 객체의 이름 " << this->title << endl;
-}*/
+}
 
 Book::~Book() {
   if(title)  // 만일 name에 동적 할당된 배열이 있으면
@@ -35,8 +35,6 @@ Book::~Book() {
 
 void Book::set(char* title, int price) { 
   this->price = price;
-  int len = strlen(title);
-  this -> title = new char [len+1];  // name 문자열 공간 할당
   strcpy(this->title, title);
 }
 

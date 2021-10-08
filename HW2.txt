@@ -1,4 +1,4 @@
-/*
+
 //1.
 //(1) 생성자
 Book::Book(char* title, int price) { 
@@ -13,11 +13,9 @@ Book::~Book() {
     delete [] title; // 메모리 소멸
 }
 //(3) set()함수
-void Book::set(char* title, int price) { 
-  this->price = price;
-  int len = strlen(title);
-  this -> title = new char [len+1];  // title 문자열 공간 할당
-  strcpy(this->title, title);
+void Book::set(char* title, int price) {
+    this->price = price;
+    strcpy(this->title, title);
 }
 
 //2.
@@ -48,7 +46,7 @@ class Book{
 Book::Book(string title, int price) { 
   this->price = price;
   //int len = strlen(title);
-  //this -> title = new char [len+1];  // name 문자열 공간 할당
+  //this -> title = new char [len+1];  
   //strcpy(this->title, title);
   this->title = title;
 }
@@ -63,22 +61,18 @@ Book::Book(string title, int price) {
 //}
 
 Book::~Book() {
-  //if(title)  // 만일 name에 동적 할당된 배열이 있으면
-  //  delete [] title; // 메모리 소멸
+  //if(title)  
+  //  delete [] title; 
 }
 
 void Book::set(string title, int price) { 
   this->price = price;
-  //int len = strlen(title);
-  //this -> title = new char [len+1];  // name 문자열 공간 할당
-  //strcpy(this->title, title);
   this->title = title;
 }
 int main() {
-  Book cpp("명품C++", 10000);  //(1) father 객체 생성
-  Book java = cpp;  //(2) daughter 객체 복사 생성, 복사생성자 호출
+  Book cpp("명품C++", 10000);  
+  Book java = cpp;  
   java.set("명품자바", 12000);
   cpp.show();
   java.show();
 }
-*/
