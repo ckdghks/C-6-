@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 //#include <cstring>
 #include <string>
@@ -67,3 +68,4 @@ int main() {
   cout << "g()함수 실행." << endl;
   g().show();
 }
+*/
